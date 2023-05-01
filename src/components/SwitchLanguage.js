@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { languageContext } from "../contexts/languageContext.js";
+import { languageContext } from "../contexts/useLanguageContext.js";
 import { FrenchIcon, UkIcon } from "./Icons.js";
 
 function SwitchLanguage() {

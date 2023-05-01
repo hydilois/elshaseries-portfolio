@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CircularText2 } from "./Icons.js";
 import Link from "next/link.js";
 import translation from "@/translation.js";
-import { languageContext } from "@/contexts/languageContext.js";
+import { languageContext } from "@/contexts/useLanguageContext.js";
 
 const HireMe = () => {
   const { language } = useContext(languageContext);

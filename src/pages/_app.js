@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import { Montserrat } from "next/font/google";
 import Head from "next/head.js";
 import { useRouter } from "next/router.js";
-import LanguageContextProvider from "../contexts/languageContext.js";
+import LanguageContextProvider from "../contexts/useLanguageContext.js";
 
 const montserrat = Montserrat({
   subsets: ["latin"],

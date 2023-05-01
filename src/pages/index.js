@@ -9,7 +9,7 @@ import HireMe from "@/components/HireMe.js";
 import ligthBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import TransitionEffect from "@/components/TransitionEffect.js";
 import { useContext } from "react";
-import { languageContext } from "@/contexts/languageContext.js";
+import { languageContext } from "@/contexts/useLanguageContext.js";
 import translation from "@/translation.js";
 
 export default function Home() {

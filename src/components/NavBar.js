@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher.js";
 import SwitchLanguage from "./SwitchLanguage.js";
 import translation from "@/translation.js";
-import { languageContext } from "@/contexts/languageContext.js";
+import { languageContext } from "@/contexts/useLanguageContext.js";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();

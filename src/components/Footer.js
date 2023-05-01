@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "./Layout.js";
 import Link from "next/link.js";
 import { useContext } from "react";
-import { languageContext } from "@/contexts/languageContext.js";
+import { languageContext } from "@/contexts/useLanguageContext.js";
 import translation from "@/translation.js";
 
 const Footer = () => {
