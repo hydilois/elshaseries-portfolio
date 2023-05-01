@@ -102,9 +102,17 @@ const NavBar = () => {
             title={translation[language].home}
             className="mr-4"
           />
-          <CustomLink href="/about" title={translation[language].about} className="mx-4" />
-          <CustomLink href="/projects" title={translation[language].projects} className="mx-4" />
-          <CustomLink href="/blog" title="Blog" className="mx-4" />
+          <CustomLink
+            href="/about"
+            title={translation[language].about}
+            className="mx-4"
+          />
+          <CustomLink
+            href="#"
+            title={translation[language].projects}
+            className="mx-4"
+          />
+          <CustomLink href="#" title="Blog" className="mx-4" />
           <SwitchLanguage />
         </nav>
 
@@ -180,27 +188,19 @@ const NavBar = () => {
             <CustomMobileLink
               href="/"
               title={translation[language].home}
-              className=""
               toggle={handleClick}
             />
             <CustomMobileLink
               href="/about"
               title={translation[language].about}
-              className=""
               toggle={handleClick}
             />
             <CustomMobileLink
-              href="/projects"
+              href="#"
               title={translation[language].projects}
-              className=""
               toggle={handleClick}
             />
-            <CustomMobileLink
-              href="/blog"
-              title="Blog"
-              className=""
-              toggle={handleClick}
-            />
+            <CustomMobileLink href="#" title="Blog" toggle={handleClick} />
             <SwitchLanguage className="!ml-0" />
           </nav>
 

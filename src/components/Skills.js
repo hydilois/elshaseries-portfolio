@@ -26,7 +26,7 @@ const Skills = () => {
   const { language } = useContext(languageContext);
   return (
     <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">
+      <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32 xs:text-4xl">
       {translation[language].skills}
       </h2>
       <div

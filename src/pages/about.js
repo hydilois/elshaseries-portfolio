@@ -41,7 +41,10 @@ const About = () => {
     <>
       <Head>
         <title>Elsha Series | About Page</title>
-        <meta name="description" content="About me" />
+        <meta
+          name="description"
+          content="mobile,design,platforms,experience,projects,app,web,application,developer,product,technology,project,management"
+        />
       </Head>
       <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
