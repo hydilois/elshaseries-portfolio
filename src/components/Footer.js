@@ -8,7 +8,6 @@ import translation from "@/translation.js";
 const Footer = () => {
   const { language } = useContext(languageContext);
   return (
-    // 655947410
     <footer
       className="w-full border-t-2 border-solid border-dark font-medium text-lg 
     dark:text-light dark:border-light sm:text-base
@@ -25,14 +24,14 @@ const Footer = () => {
           </span>
           {translation[language].by}&nbsp;
           <span className="font-bold">Elsha Series</span>&nbsp;
-          {translation[language].inspired}&nbsp;
+          {/* {translation[language].inspired}&nbsp;
           <Link
             href="https://devdreaming.com/"
             className="underline underline-offset-2 font-bold"
             target="_blank"
           >
             CodeBucks
-          </Link>
+          </Link> */}
         </div>
 
         <Link
