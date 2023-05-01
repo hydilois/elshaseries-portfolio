@@ -35,7 +35,7 @@ const AnimatedNumbers = ({ value }) => {
   return <span ref={ref}></span>;
 };
 
-const about = () => {
+const About = () => {
   const { language } = useContext(languageContext);
   return (
     <>
@@ -122,4 +122,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
