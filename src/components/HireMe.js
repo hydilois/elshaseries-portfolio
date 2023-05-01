@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CircularText2 } from "./Icons.js";
 import Link from "next/link.js";
+import translation from "@/translation.js";
+import { languageContext } from "@/contexts/languageContext.js";
 
 const HireMe = () => {
+  const { language } = useContext(languageContext);
   return (
     <div
       className="fixed left-4 bottom-4 flex items-center justify-center
@@ -13,7 +16,7 @@ const HireMe = () => {
           className={"fill-dark animate-spin-slow dark:fill-light"}
         />
         <Link
-          href="mailto:elshaseriespro@gmail.com"
+          href="mailto:shydilaicard@gmail.com"
           className="flex items-center justify-center 
           absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
           bg-dark text-light shadow-md border border-solid
@@ -22,9 +25,10 @@ const HireMe = () => {
            dark:bg-light dark:text-dark 
           hover:dark:bg-dark hover:dark:text-light hover:dark:border-light
           md:w-12 md:h-12 md:text-[10px]
+          text-center
           "
         >
-          Hire me
+          {translation[language].hire}
         </Link>
       </div>
     </div>

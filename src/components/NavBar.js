@@ -119,7 +119,7 @@ const NavBar = () => {
             <TwitterIcon />
           </motion.a>
           <motion.a
-            href="https://github.com"
+            href="https://github.com/hydilois"
             target="_blank"
             className="w-6 mx-3 "
             whileHover={{ y: -2 }}
@@ -128,7 +128,7 @@ const NavBar = () => {
             <GithubIcon />
           </motion.a>
           <motion.a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/hydil-aicard-sokeing-b0b74310b/"
             target="_blank"
             className="w-6 mx-3"
             whileHover={{ y: -2 }}
@@ -136,7 +136,7 @@ const NavBar = () => {
           >
             <LinkedInIcon />
           </motion.a>
-          <motion.a
+          {/* <motion.a
             href="https://pinterest.com"
             target="_blank"
             className="w-6 mx-3 bg-light rounded-full"
@@ -144,8 +144,8 @@ const NavBar = () => {
             whileTap={{ scale: 0.9 }}
           >
             <PinterestIcon />
-          </motion.a>
-          <motion.a
+          </motion.a> */}
+          {/* <motion.a
             href="https://dribble.com"
             target="_blank"
             className="w-6 ml-3"
@@ -153,7 +153,7 @@ const NavBar = () => {
             whileTap={{ scale: 0.9 }}
           >
             <DribbbleIcon />
-          </motion.a>
+          </motion.a> */}
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
             className={`ml-3 flex items-center justify-center rounded-full p-1
