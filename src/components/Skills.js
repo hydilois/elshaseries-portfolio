@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
+import translation from "@/translation.js";
+import { languageContext } from "@/contexts/useLanguageContext.js";
 
 const Skill = ({ name, x, y }) => {
   return (
@@ -21,10 +23,11 @@ const Skill = ({ name, x, y }) => {
 };
 
 const Skills = () => {
+  const { language } = useContext(languageContext);
   return (
     <>
       <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">
-        Skills
+      {translation[language].skills}
       </h2>
       <div
         className="w-full h-screen relative flex items-center justify-center rounded-full
@@ -50,11 +53,12 @@ const Skills = () => {
         <Skill name="Javascript" x="20vw" y="6vw" />
         <Skill name="ReactJs" x="0vw" y="12vw" />
         <Skill name="NextJs" x="-20vw" y="-15vw" />
-        <Skill name="GabtsbyJs" x="15vw" y="-12vw" />
-        <Skill name="Web Design" x="32vw" y="-5vw" />
-        <Skill name="Figma" x="0vw" y="-20vw" />
-        <Skill name="Firebase" x="-25vw" y="18vw" />
+        <Skill name="PHP" x="15vw" y="-12vw" />
+        <Skill name="Symfony" x="32vw" y="-5vw" />
+        <Skill name="MySql" x="0vw" y="-20vw" />
+        <Skill name="Java" x="-25vw" y="18vw" />
         <Skill name="Tailwind CSS" x="18vw" y="18vw" />
+        <Skill name="NodeJs" x="0vw" y="20vw" />
       </div>
     </>
   );

@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import LiIcon from "./LiIcon.js";
+import translation from "@/translation.js";
+import { languageContext } from "@/contexts/useLanguageContext.js";
 
 const Details = ({ type, time, place, info }) => {
   const ref = useRef(null);
@@ -15,7 +17,9 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl  sm:text-xl xs:text-lg">{type}</h3>
+        <h3 className="capitalize font-bold text-2xl  sm:text-xl xs:text-lg">
+          {type}
+        </h3>
         <span className="capitalize font-semibold text-dark/75 dark:text-light/75  xs:text-sm">
           {time} | {place}
         </span>
@@ -31,9 +35,12 @@ const Education = () => {
     target: ref,
     offset: ["start end", "center start"],
   });
+  const { language } = useContext(languageContext);
   return (
     <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">Education</h2>
+      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
+      {translation[language].education}
+      </h2>
       <div className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
         <motion.div
           style={{ scaleY: scrollYProgress }}
@@ -45,25 +52,16 @@ const Education = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4  xs:ml-2">
           <Details
-            type="Bachelor Of Science In Computer Science"
-            time="2016-2020"
-            place="Massachusetts Institute Of Technology (MIT)"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-            Intelligence."
+            type={translation[language].type1}
+            time="2013-2016"
+            place={translation[language].place1}
+            info={translation[language].info1}
           />
           <Details
-            type="Bachelor Of Science In Computer Science"
-            time="2016-2020"
-            place="Massachusetts Institute Of Technology (MIT)"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-            Intelligence."
-          />
-          <Details
-            type="Bachelor Of Science In Computer Science"
-            time="2016-2020"
-            place="Massachusetts Institute Of Technology (MIT)"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-            Intelligence."
+            type={translation[language].type2}
+            time="2019-2020"
+            place="Swiss ELearning Institute"
+            info={translation[language].info2}
           />
         </ul>
       </div>

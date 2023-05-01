@@ -2,13 +2,15 @@ import AnimatedText from "@/components/AnimatedText.js";
 import Layout from "@/components/Layout.js";
 import Head from "next/head.js";
 import Image from "next/image.js";
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import profilePic from "../../public/images/profile/developer-pic-4.png";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills.js";
 import Experience from "@/components/Experience.js";
 import Education from "@/components/Education.js";
 import TransitionEffect from "@/components/TransitionEffect.js";
+import translation from "@/translation.js";
+import { languageContext } from "@/contexts/useLanguageContext.js";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -34,42 +36,39 @@ const AnimatedNumbers = ({ value }) => {
 };
 
 const about = () => {
+  const { language } = useContext(languageContext);
   return (
     <>
       <Head>
         <title>Elsha Series | About Page</title>
         <meta name="description" content="About me" />
       </Head>
-      <TransitionEffect/>
+      <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text="Passion Fuels Purpose!"
+            text={translation[language].about_header}
             className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                Biography
+                {translation[language].about_title}
               </h2>
               <p className="font-medium">
-                - Hi, I&apos;m CodeBucks, a web developer and UI/UX designer with a
-                passion for creating beautiful, functional, and user-centered
-                digital experiences. With 4 years of experience in the field. I
-                am always looking for new and innovative ways to bring my
-                clients&apos;s visions to life.
+                - {translation[language].paragraph1}
               </p>
               <p className="my-4 font-medium">
-                I believe that design is about more than just making things look
-                pretty – it&apos;s about solving problems and creating intuitive,
-                enjoyable experiences for users.
+                - {translation[language].paragraph2}
+              </p>
+              <p className="my-4 font-medium">
+                - {translation[language].paragraph3}
+              </p>
+              <p className="my-4 font-medium">
+                - {translation[language].paragraph4}
               </p>
               <p className="font-medium">
-                Whether I&apos;m working on a website, mobile app, or other digital
-                product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                - {translation[language].paragraph5}
               </p>
             </div>
             <div
@@ -93,7 +92,7 @@ const about = () => {
                   <AnimatedNumbers value={50} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-base">
-                  Satisfied clients
+                  {translation[language].clients}
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
@@ -101,7 +100,7 @@ const about = () => {
                   <AnimatedNumbers value={40} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-base">
-                  Projects Completed
+                  {translation[language].projects_completed}
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
@@ -109,7 +108,7 @@ const about = () => {
                   <AnimatedNumbers value={4} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-base">
-                  Years of experience
+                  {translation[language].experiences}
                 </h2>
               </div>
             </div>
